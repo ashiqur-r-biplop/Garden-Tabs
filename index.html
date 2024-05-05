@@ -1,172 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tabs</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .tab-content .active {
-      display: block;
-    }
-
-    .tab-box {
-      display: none;
-    }
-  </style>
-</head>
-
-<body>
-  <section class="container">
-    <div class="latest-projects">
-      <div class="top-bar-tabs">
-        <h1 class="section-title">
-          Latest <span class="project-text">Project</span>
-        </h1>
-        <ul class="tabs">
-          <li class="tab" id="tab-1" onclick="handleTab('tab-box-1', 'tab-1')">
-            Tab1
-          </li>
-          <span>/</span>
-          <li class="tab" id="tab-2" onclick="handleTab('tab-box-2', 'tab-2')">
-            Tab2
-          </li>
-          <span>/</span>
-          <li class="tab" id="tab-3" onclick="handleTab('tab-box-3', 'tab-3')">
-            Tab3
-          </li>
-          <span>/</span>
-          <li class="tab" id="tab-4" onclick="handleTab('tab-box-4', 'tab-4')">
-            Tab4
-          </li>
-          <span>/</span>
-          <li class="tab" id="tab-5" onclick="handleTab('tab-box-5', 'tab-5')">
-            Tab5
-          </li>
-        </ul>
-      </div>
-      <div class="tab-content">
-        <div class="tab-box" id="tab-box-1">tab-box 1</div>
-        <div class="tab-box" id="tab-box-2">tab-box 2</div>
-        <div class="tab-box" id="tab-box-3">tab-box 3</div>
-        <div class="tab-box" id="tab-box-4">tab-box 4</div>
-        <div class="tab-box" id="tab-box-5">tab-box 5</div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    function handleTab(boxId, TabIndex) {
-      const Tab = document.getElementById(TabIndex);
-      const TabBox = document.getElementById(boxId);
-      const activeTab = Tab?.id;
-      console.log(Tab);
-      if (activeTab == "tab-1" || TabIndex == "tab-1") {
-        const tabIndexTwo = document.getElementById("tab-box-2");
-        const tabIndexThree = document.getElementById("tab-box-3");
-        const tabIndexFour = document.getElementById("tab-box-4");
-        const tabIndexFive = document.getElementById("tab-box-5");
-        tabIndexTwo.classList.remove("active");
-        tabIndexThree.classList.remove("active");
-        tabIndexFour.classList.remove("active");
-        tabIndexFive.classList.remove("active");
-        TabBox.classList.add("active");
-        // add tab active class
-        const tabTwo = document.getElementById("tab-2");
-        const tabThree = document.getElementById("tab-3");
-        const tabFour = document.getElementById("tab-4");
-        const tabFive = document.getElementById("tab-5");
-        tabTwo.classList.remove("activeTab");
-        tabThree.classList.remove("activeTab");
-        tabFour.classList.remove("activeTab");
-        tabFive.classList.remove("activeTab");
-        Tab.classList.add("activeTab");
-      } else if (activeTab == "tab-2") {
-        const tabIndexOne = document.getElementById("tab-box-1");
-        const tabIndexThree = document.getElementById("tab-box-3");
-        const tabIndexFour = document.getElementById("tab-box-4");
-        const tabIndexFive = document.getElementById("tab-box-5");
-        tabIndexOne.classList.remove("active");
-        tabIndexThree.classList.remove("active");
-        tabIndexFour.classList.remove("active");
-        tabIndexFive.classList.remove("active");
-        TabBox.classList.add("active");
-        // add tab active class
-        const tabOne = document.getElementById("tab-1");
-        const tabThree = document.getElementById("tab-3");
-        const tabFour = document.getElementById("tab-4");
-        const tabFive = document.getElementById("tab-5");
-        tabOne.classList.remove("activeTab");
-        tabThree.classList.remove("activeTab");
-        tabFour.classList.remove("activeTab");
-        tabFive.classList.remove("activeTab");
-        Tab.classList.add("activeTab");
-      } else if (activeTab == "tab-3") {
-        const tabIndexOne = document.getElementById("tab-box-1");
-        const tabIndexTwo = document.getElementById("tab-box-2");
-        const tabIndexFour = document.getElementById("tab-box-4");
-        const tabIndexFive = document.getElementById("tab-box-5");
-        tabIndexOne.classList.remove("active");
-        tabIndexTwo.classList.remove("active");
-        tabIndexFour.classList.remove("active");
-        tabIndexFive.classList.remove("active");
-        TabBox.classList.add("active");
-        // add tab active class
-        const tabOne = document.getElementById("tab-1");
-        const tabTwo = document.getElementById("tab-2");
-        const tabFour = document.getElementById("tab-4");
-        const tabFive = document.getElementById("tab-5");
-        tabOne.classList.remove("activeTab");
-        tabTwo.classList.remove("activeTab");
-        tabFour.classList.remove("activeTab");
-        tabFive.classList.remove("activeTab");
-        Tab.classList.add("activeTab");
-      } else if (activeTab == "tab-4") {
-        const tabIndexOne = document.getElementById("tab-box-1");
-        const tabIndexTwo = document.getElementById("tab-box-2");
-        const tabIndexThree = document.getElementById("tab-box-3");
-        const tabIndexFive = document.getElementById("tab-box-5");
-        tabIndexOne.classList.remove("active");
-        tabIndexTwo.classList.remove("active");
-        tabIndexThree.classList.remove("active");
-        tabIndexFive.classList.remove("active");
-        TabBox.classList.add("active");
-        // add tab active class
-        const tabOne = document.getElementById("tab-1");
-        const tabTwo = document.getElementById("tab-2");
-        const tabThree = document.getElementById("tab-3");
-        const tabFive = document.getElementById("tab-5");
-        tabOne.classList.remove("activeTab");
-        tabTwo.classList.remove("activeTab");
-        tabThree.classList.remove("activeTab");
-        tabFive.classList.remove("activeTab");
-        Tab.classList.add("activeTab");
-      } else if (activeTab == "tab-5") {
-        const tabIndexOne = document.getElementById("tab-box-1");
-        const tabIndexTwo = document.getElementById("tab-box-2");
-        const tabIndexThree = document.getElementById("tab-box-3");
-        const tabIndexFour = document.getElementById("tab-box-4");
-        tabIndexOne.classList.remove("active");
-        tabIndexTwo.classList.remove("active");
-        tabIndexThree.classList.remove("active");
-        tabIndexFour.classList.remove("active");
-        TabBox.classList.add("active");
-        // add tab active class
-        const tabOne = document.getElementById("tab-1");
-        const tabTwo = document.getElementById("tab-2");
-        const tabThree = document.getElementById("tab-3");
-        const tabFour = document.getElementById("tab-4");
-
-        tabOne.classList.remove("activeTab");
-        tabTwo.classList.remove("activeTab");
-        tabThree.classList.remove("activeTab");
-        tabFour.classList.remove("activeTab");
-        Tab.classList.add("activeTab");
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .tab-content .active {
+        display: block;
       }
-    }
-    handleTab("tab-box-1", "tab-1");
-  </script>
-</body>
 
+      .tab-box {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="container">
+      <div class="latest-projects">
+        <div class="top-bar-tabs">
+          <h1 class="section-title">
+            Latest <span class="project-text">Project</span>
+          </h1>
+          <ul class="tabs">
+            <li
+              class="tab"
+              id="tab-1"
+              onclick="handleTab('tab-box-1', 'tab-1')"
+            >
+              Tab1
+            </li>
+            <span>/</span>
+            <li
+              class="tab"
+              id="tab-2"
+              onclick="handleTab('tab-box-2', 'tab-2')"
+            >
+              Tab2
+            </li>
+            <span>/</span>
+            <li
+              class="tab"
+              id="tab-3"
+              onclick="handleTab('tab-box-3', 'tab-3')"
+            >
+              Tab3
+            </li>
+            <span>/</span>
+            <li
+              class="tab"
+              id="tab-4"
+              onclick="handleTab('tab-box-4', 'tab-4')"
+            >
+              Tab4
+            </li>
+            <span>/</span>
+            <li
+              class="tab"
+              id="tab-5"
+              onclick="handleTab('tab-box-5', 'tab-5')"
+            >
+              Tab5
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content">
+          <div class="tab-box" id="tab-box-1">
+            <div class="tab-grid">
+              <div class="grid-card tab-col-span-2">
+                <div class="tab-img-box">
+                  <img src="./images/image1.jpeg" class="tab-image" alt="" />
+                </div>
+                <div class="grid-tab-content">
+                  <h2 class="tab-image-title">biplop</h2>
+                  <p class="tab-image-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                    est optio repellat aliquam? Pariatur, et?
+                  </p>
+                </div>
+              </div>
+              <div class="grid-card">
+                <div class="tab-img-box">
+                  <img src="./images/image1.jpeg" class="tab-image" alt="" />
+                </div>
+                <div class="grid-tab-content">
+                  <h2 class="tab-image-title">biplop</h2>
+                  <p class="tab-image-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                    est optio repellat aliquam? Pariatur, et?
+                  </p>
+                </div>
+              </div>
+              <div class="grid-card">
+                <div class="tab-img-box">
+                  <img src="./images/image1.jpeg" class="tab-image" alt="" />
+                </div>
+                <div class="grid-tab-content">
+                  <h2 class="tab-image-title">biplop</h2>
+                  <p class="tab-image-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                    est optio repellat aliquam? Pariatur, et?
+                  </p>
+                </div>
+              </div>
+              <div class="grid-card">
+                <div class="tab-img-box">
+                  <img src="./images/image1.jpeg" class="tab-image" alt="" />
+                </div>
+                <div class="grid-tab-content">
+                  <h2 class="tab-image-title">biplop</h2>
+                  <p class="tab-image-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                    est optio repellat aliquam? Pariatur, et?
+                  </p>
+                </div>
+              </div>
+              <div class="grid-card">
+                <div class="tab-img-box">
+                  <img src="./images/image1.jpeg" class="tab-image" alt="" />
+                </div>
+                <div class="grid-tab-content">
+                  <h2 class="tab-image-title">biplop</h2>
+                  <p class="tab-image-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                    est optio repellat aliquam? Pariatur, et?
+                  </p>
+                </div>
+              </div>
+              <div class="grid-card">
+                <div class="tab-img-box">
+                  <img src="./images/image1.jpeg" class="tab-image" alt="" />
+                </div>
+                <div class="grid-tab-content">
+                  <h2 class="tab-image-title">biplop</h2>
+                  <p class="tab-image-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                    est optio repellat aliquam? Pariatur, et?
+                  </p>
+                </div>
+              </div>
+              <div class="grid-card">
+                <div class="tab-img-box">
+                  <img src="./images/image1.jpeg" class="tab-image" alt="" />
+                </div>
+                <div class="grid-tab-content">
+                  <h2 class="tab-image-title">biplop</h2>
+                  <p class="tab-image-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                    est optio repellat aliquam? Pariatur, et?
+                  </p>
+                </div>
+              </div>
+              <div class="grid-card">
+                <div class="tab-img-box">
+                  <img src="./images/image1.jpeg" class="tab-image" alt="" />
+                </div>
+                <div class="grid-tab-content">
+                  <h2 class="tab-image-title">biplop</h2>
+                  <p class="tab-image-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                    est optio repellat aliquam? Pariatur, et?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-box" id="tab-box-2">tab-box 2</div>
+          <div class="tab-box" id="tab-box-3">tab-box 3</div>
+          <div class="tab-box" id="tab-box-4">tab-box 4</div>
+          <div class="tab-box" id="tab-box-5">tab-box 5</div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function handleTab(boxId, TabIndex) {
+        const Tab = document.getElementById(TabIndex);
+        const TabBox = document.getElementById(boxId);
+        const activeTab = Tab?.id;
+        console.log(Tab);
+        if (activeTab == "tab-1" || TabIndex == "tab-1") {
+          const tabIndexTwo = document.getElementById("tab-box-2");
+          const tabIndexThree = document.getElementById("tab-box-3");
+          const tabIndexFour = document.getElementById("tab-box-4");
+          const tabIndexFive = document.getElementById("tab-box-5");
+          tabIndexTwo.classList.remove("active");
+          tabIndexThree.classList.remove("active");
+          tabIndexFour.classList.remove("active");
+          tabIndexFive.classList.remove("active");
+          TabBox.classList.add("active");
+          // add tab active class
+          const tabTwo = document.getElementById("tab-2");
+          const tabThree = document.getElementById("tab-3");
+          const tabFour = document.getElementById("tab-4");
+          const tabFive = document.getElementById("tab-5");
+          tabTwo.classList.remove("activeTab");
+          tabThree.classList.remove("activeTab");
+          tabFour.classList.remove("activeTab");
+          tabFive.classList.remove("activeTab");
+          Tab.classList.add("activeTab");
+        } else if (activeTab == "tab-2") {
+          const tabIndexOne = document.getElementById("tab-box-1");
+          const tabIndexThree = document.getElementById("tab-box-3");
+          const tabIndexFour = document.getElementById("tab-box-4");
+          const tabIndexFive = document.getElementById("tab-box-5");
+          tabIndexOne.classList.remove("active");
+          tabIndexThree.classList.remove("active");
+          tabIndexFour.classList.remove("active");
+          tabIndexFive.classList.remove("active");
+          TabBox.classList.add("active");
+          // add tab active class
+          const tabOne = document.getElementById("tab-1");
+          const tabThree = document.getElementById("tab-3");
+          const tabFour = document.getElementById("tab-4");
+          const tabFive = document.getElementById("tab-5");
+          tabOne.classList.remove("activeTab");
+          tabThree.classList.remove("activeTab");
+          tabFour.classList.remove("activeTab");
+          tabFive.classList.remove("activeTab");
+          Tab.classList.add("activeTab");
+        } else if (activeTab == "tab-3") {
+          const tabIndexOne = document.getElementById("tab-box-1");
+          const tabIndexTwo = document.getElementById("tab-box-2");
+          const tabIndexFour = document.getElementById("tab-box-4");
+          const tabIndexFive = document.getElementById("tab-box-5");
+          tabIndexOne.classList.remove("active");
+          tabIndexTwo.classList.remove("active");
+          tabIndexFour.classList.remove("active");
+          tabIndexFive.classList.remove("active");
+          TabBox.classList.add("active");
+          // add tab active class
+          const tabOne = document.getElementById("tab-1");
+          const tabTwo = document.getElementById("tab-2");
+          const tabFour = document.getElementById("tab-4");
+          const tabFive = document.getElementById("tab-5");
+          tabOne.classList.remove("activeTab");
+          tabTwo.classList.remove("activeTab");
+          tabFour.classList.remove("activeTab");
+          tabFive.classList.remove("activeTab");
+          Tab.classList.add("activeTab");
+        } else if (activeTab == "tab-4") {
+          const tabIndexOne = document.getElementById("tab-box-1");
+          const tabIndexTwo = document.getElementById("tab-box-2");
+          const tabIndexThree = document.getElementById("tab-box-3");
+          const tabIndexFive = document.getElementById("tab-box-5");
+          tabIndexOne.classList.remove("active");
+          tabIndexTwo.classList.remove("active");
+          tabIndexThree.classList.remove("active");
+          tabIndexFive.classList.remove("active");
+          TabBox.classList.add("active");
+          // add tab active class
+          const tabOne = document.getElementById("tab-1");
+          const tabTwo = document.getElementById("tab-2");
+          const tabThree = document.getElementById("tab-3");
+          const tabFive = document.getElementById("tab-5");
+          tabOne.classList.remove("activeTab");
+          tabTwo.classList.remove("activeTab");
+          tabThree.classList.remove("activeTab");
+          tabFive.classList.remove("activeTab");
+          Tab.classList.add("activeTab");
+        } else if (activeTab == "tab-5") {
+          const tabIndexOne = document.getElementById("tab-box-1");
+          const tabIndexTwo = document.getElementById("tab-box-2");
+          const tabIndexThree = document.getElementById("tab-box-3");
+          const tabIndexFour = document.getElementById("tab-box-4");
+          tabIndexOne.classList.remove("active");
+          tabIndexTwo.classList.remove("active");
+          tabIndexThree.classList.remove("active");
+          tabIndexFour.classList.remove("active");
+          TabBox.classList.add("active");
+          // add tab active class
+          const tabOne = document.getElementById("tab-1");
+          const tabTwo = document.getElementById("tab-2");
+          const tabThree = document.getElementById("tab-3");
+          const tabFour = document.getElementById("tab-4");
+
+          tabOne.classList.remove("activeTab");
+          tabTwo.classList.remove("activeTab");
+          tabThree.classList.remove("activeTab");
+          tabFour.classList.remove("activeTab");
+          Tab.classList.add("activeTab");
+        }
+      }
+      handleTab("tab-box-1", "tab-1");
+    </script>
+  </body>
 </html>
