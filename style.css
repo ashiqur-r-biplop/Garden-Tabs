@@ -1,0 +1,42 @@
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.latest-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: montserrat;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.project-text {
+    color: blue;
+}
+
+.top-bar-tabs,
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.tabs {
+    gap: 20px;
+}
+
+.tabs li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.tabs .activeTab {
+    color: rgb(255, 0, 0);
+    font-weight: 500;
+}
